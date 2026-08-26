@@ -1,13 +1,14 @@
 import matplotlib.pyplot as plt
 
 
-def plot(x,y):
-    plt.plot(x, y, color='blue', marker='o', linestyle='--')
-    plt.axhline(y=0.5, color='green', linestyle='-', label='50%')
-    plt.axvline(x=23, color='red', linestyle='--', label='50% probability at 23 people')
+def create_plot(x,y):
+    plt.plot(x, y, color="blue", linestyle="--")
+    plt.axhline(y=0.5, color="green", linestyle="-", label="50% Probability")
+    plt.axvline(x=23, color="red", linestyle="--", label="23 People Threshold")
 
-
-    plt.title("Simple Line Graph")
-    plt.xlabel("no of people")
-    plt.ylabel("probability")
+    plt.title("Birthday Paradox Probability")
+    plt.xlabel("Number of People")
+    plt.ylabel("Probability of at least 1 shared birthday")
+    plt.legend()
+    plt.grid(True, alpha=0.3)
     plt.show()
